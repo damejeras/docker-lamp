@@ -1,0 +1,11 @@
+version: "2"
+services:
+    lamp:
+      build: .
+      container_name: webapp
+      volumes:
+        - ./app:/app
+        - ./logs:/var/log/apache2
+      ports:
+        - "8081:3306"
+        - "8080:80"
